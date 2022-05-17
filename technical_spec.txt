@@ -1,0 +1,22 @@
+The functions in the files in the views folder are all made automatic py pyside2. I used the pysed2 app to create the UI
+and then converted to Python code.
+
+I wrote the functions in the folder controllers
+
+This class is the class for the Edit Game window, it contains the logic behind the Edit Game window. 
+class EditGameWindow(QWidget, EditGameForm):
+
+These functions let us write into the code
+def populate_inputs(self):
+def select_file(self):
+
+The following functios check error in the input
+ def check_inputs(self):
+
+This function write the input into the database
+def edit_game(self):
+
+The functions in the files main_window and new_game work in a similar manner.
+
+Finalyy the function in the file connection.py conecst us with our database.
+And in games.py we kae the queries for the database. 
