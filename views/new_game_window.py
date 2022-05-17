@@ -3,54 +3,59 @@
 ################################################################################
 ## Form generated from reading UI file 'new_game_window.ui'
 ##
-## Created by: Qt User Interface Compiler version 5.15.2
+## Created by: Qt User Interface Compiler version 5.15.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *
-from PySide2.QtGui import *
+from PySide2.QtCore import (QCoreApplication, QDate, QDateTime, QMetaObject,
+    QObject, QPoint, QRect, QSize, QTime, QUrl, Qt)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+    QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter,
+    QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
 
 
-class newGameForm(object):
-    def setupUi(self, newGameWindow):
-        if not newGameWindow.objectName():
-            newGameWindow.setObjectName(u"newGameWindow")
-        newGameWindow.resize(405, 472)
-        self.label = QLabel(newGameWindow)
+class NewGameForm(object):
+    def setupUi(self, NewGameWindow):
+        if not NewGameWindow.objectName():
+            NewGameWindow.setObjectName(u"NewGameWindow")
+        NewGameWindow.resize(405, 472)
+        NewGameWindow.setCursor(QCursor(Qt.PointingHandCursor))
+        self.label = QLabel(NewGameWindow)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(10, 20, 381, 20))
         self.label.setFrameShape(QFrame.Box)
-        self.label_2 = QLabel(newGameWindow)
+        self.label_2 = QLabel(NewGameWindow)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(30, 60, 61, 13))
-        self.titleLineEdit = QLineEdit(newGameWindow)
+        self.titleLineEdit = QLineEdit(NewGameWindow)
         self.titleLineEdit.setObjectName(u"titleLineEdit")
         self.titleLineEdit.setGeometry(QRect(30, 80, 351, 20))
-        self.categoryLineEdit = QLineEdit(newGameWindow)
-        self.categoryLineEdit.setObjectName(u"categoryLineEdit")
-        self.categoryLineEdit.setGeometry(QRect(30, 130, 351, 20))
-        self.label_3 = QLabel(newGameWindow)
+        self.label_3 = QLabel(NewGameWindow)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(30, 110, 61, 13))
-        self.label_4 = QLabel(newGameWindow)
+        self.categoryLineEdit = QLineEdit(NewGameWindow)
+        self.categoryLineEdit.setObjectName(u"categoryLineEdit")
+        self.categoryLineEdit.setGeometry(QRect(30, 130, 271, 20))
+        self.label_4 = QLabel(NewGameWindow)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(30, 160, 61, 13))
-        self.durationSpinBox = QSpinBox(newGameWindow)
+        self.label_4.setGeometry(QRect(30, 160, 121, 16))
+        self.durationSpinBox = QSpinBox(NewGameWindow)
+        self.durationSpinBox.setMaximum(2000)
         self.durationSpinBox.setObjectName(u"durationSpinBox")
         self.durationSpinBox.setGeometry(QRect(30, 180, 101, 22))
-        self.label_5 = QLabel(newGameWindow)
+        self.label_5 = QLabel(NewGameWindow)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(30, 220, 61, 13))
-        self.filePathLineEdit = QLineEdit(newGameWindow)
+        self.label_5.setGeometry(QRect(30, 210, 121, 16))
+        self.filePathLineEdit = QLineEdit(NewGameWindow)
         self.filePathLineEdit.setObjectName(u"filePathLineEdit")
-        self.filePathLineEdit.setGeometry(QRect(30, 240, 181, 20))
-        self.selectFileButton = QPushButton(newGameWindow)
+        self.filePathLineEdit.setGeometry(QRect(30, 230, 191, 20))
+        self.selectFileButton = QPushButton(NewGameWindow)
         self.selectFileButton.setObjectName(u"selectFileButton")
-        self.selectFileButton.setGeometry(QRect(230, 240, 75, 23))
-        self.selectFileButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.selectFileButton.setStyleSheet(u"QPushButton:hover\n"
+        self.selectFileButton.setGeometry(QRect(230, 230, 31, 31))
+        self.selectFileButton.setStyleSheet(u"\n"
+"QPushButton:hover\n"
 "{\n"
 "	border-style: solid;\n"
 "   	background-color:#bbdefb;\n"
@@ -63,17 +68,17 @@ class newGameForm(object):
 "}\n"
 "")
         icon = QIcon()
-        icon.addFile(u"../assets/select-file.icon.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"./assets/icons/select-file.icon.png", QSize(), QIcon.Normal, QIcon.Off)
         self.selectFileButton.setIcon(icon)
         self.selectFileButton.setIconSize(QSize(30, 30))
         self.selectFileButton.setFlat(True)
-        self.label_6 = QLabel(newGameWindow)
+        self.label_6 = QLabel(NewGameWindow)
         self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(30, 280, 71, 16))
-        self.descriptiontextEdit = QTextEdit(newGameWindow)
-        self.descriptiontextEdit.setObjectName(u"descriptiontextEdit")
-        self.descriptiontextEdit.setGeometry(QRect(30, 300, 351, 111))
-        self.addButton = QPushButton(newGameWindow)
+        self.label_6.setGeometry(QRect(30, 280, 121, 16))
+        self.descriptionTextedit = QTextEdit(NewGameWindow)
+        self.descriptionTextedit.setObjectName(u"descriptionTextedit")
+        self.descriptionTextedit.setGeometry(QRect(30, 300, 351, 111))
+        self.addButton = QPushButton(NewGameWindow)
         self.addButton.setObjectName(u"addButton")
         self.addButton.setGeometry(QRect(94, 430, 101, 31))
         self.addButton.setCursor(QCursor(Qt.PointingHandCursor))
@@ -92,15 +97,15 @@ class newGameForm(object):
 "	color:white;\n"
 "}")
         icon1 = QIcon()
-        icon1.addFile(u"../assets/add-game-icon.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"./assets/icons/add-game-icon.png", QSize(), QIcon.Normal, QIcon.Off)
         self.addButton.setIcon(icon1)
         self.addButton.setIconSize(QSize(30, 30))
         self.addButton.setFlat(True)
-        self.addButton_2 = QPushButton(newGameWindow)
-        self.addButton_2.setObjectName(u"addButton_2")
-        self.addButton_2.setGeometry(QRect(210, 430, 101, 31))
-        self.addButton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.addButton_2.setStyleSheet(u"QPushButton\n"
+        self.cancelButton = QPushButton(NewGameWindow)
+        self.cancelButton.setObjectName(u"cancelButton")
+        self.cancelButton.setGeometry(QRect(200, 430, 101, 31))
+        self.cancelButton.setCursor(QCursor(Qt.PointingHandCursor))
+        self.cancelButton.setStyleSheet(u"QPushButton\n"
 "{	\n"
 "	height: 2em;\n"
 " 	border-style: solid;\n"
@@ -114,24 +119,24 @@ class newGameForm(object):
 "   	background-color:grey;\n"
 "	color:white;\n"
 "}")
-        self.addButton_2.setIconSize(QSize(30, 30))
-        self.addButton_2.setFlat(True)
+        self.cancelButton.setIconSize(QSize(30, 30))
+        self.cancelButton.setFlat(True)
 
-        self.retranslateUi(newGameWindow)
+        self.retranslateUi(NewGameWindow)
 
-        QMetaObject.connectSlotsByName(newGameWindow)
+        QMetaObject.connectSlotsByName(NewGameWindow)
     # setupUi
 
-    def retranslateUi(self, newGameWindow):
-        newGameWindow.setWindowTitle(QCoreApplication.translate("newGameWindow", u"New Game", None))
-        self.label.setText(QCoreApplication.translate("newGameWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:11pt; font-weight:600;\">NEW GAME</span></p></body></html>", None))
-        self.label_2.setText(QCoreApplication.translate("newGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Title</span></p></body></html>", None))
-        self.label_3.setText(QCoreApplication.translate("newGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Category<br/></span></p></body></html>", None))
-        self.label_4.setText(QCoreApplication.translate("newGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Duration</span></p></body></html>", None))
-        self.label_5.setText(QCoreApplication.translate("newGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Select file</span></p><p><br/></p></body></html>", None))
+    def retranslateUi(self, NewGameWindow):
+        NewGameWindow.setWindowTitle(QCoreApplication.translate("NewGameWindow", u"New Game", None))
+        self.label.setText(QCoreApplication.translate("NewGameWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:11pt; font-weight:600;\">NEW GAME</span></p></body></html>", None))
+        self.label_2.setText(QCoreApplication.translate("NewGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Title</span></p></body></html>", None))
+        self.label_3.setText(QCoreApplication.translate("NewGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Category</span></p></body></html>", None))
+        self.label_4.setText(QCoreApplication.translate("NewGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Duration</span></p></body></html>", None))
+        self.label_5.setText(QCoreApplication.translate("NewGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Select file</span></p></body></html>", None))
         self.selectFileButton.setText("")
-        self.label_6.setText(QCoreApplication.translate("newGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Description</span></p><p><br/></p></body></html>", None))
-        self.addButton.setText(QCoreApplication.translate("newGameWindow", u"ADD", None))
-        self.addButton_2.setText(QCoreApplication.translate("newGameWindow", u"CANCEL", None))
+        self.label_6.setText(QCoreApplication.translate("NewGameWindow", u"<html><head/><body><p><span style=\" font-weight:600;\">Description</span></p></body></html>", None))
+        self.addButton.setText(QCoreApplication.translate("NewGameWindow", u"ADD", None))
+        self.cancelButton.setText(QCoreApplication.translate("NewGameWindow", u"CANCEL", None))
     # retranslateUi
 
