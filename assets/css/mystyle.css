@@ -13,7 +13,7 @@ QPushButton:pressed
 
 
 
-/*Style para el boton agregar */
+/*Style for add button */
 QPushButton
 {	
 	height: 2em;
@@ -29,7 +29,7 @@ QPushButton:hover
 	color:white;
 }
 
-/* Style para el boton cancelar */
+/* Style for cancel  */
 QPushButton
 {	
 	height: 2em;
