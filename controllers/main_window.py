@@ -1,7 +1,7 @@
-from PySide2.QtWidgets import QWidget
+from PySide2.QtWidgets import QWidget, QTableWidgetItem, QAbstractItemView
 from views.main_window import ListGameForm
-
-
+from db.games import select_all_games, select_game_by_title, select_game_by_category, delete_game
+import os
 
 class ListGameWindow(QWidget, ListGameForm):
 
@@ -9,8 +9,8 @@ class ListGameWindow(QWidget, ListGameForm):
         super().__init__()
         
         self.setupUi(self)
-        self.new_button.clicked.connect(self.new_game_window)
-        self.edit_button.clicked.connect(self.edit_game_window)
+        self.open_new_button.clicked.connect(self.open_new_game_window)
+        self.open_edit_button.clicked.connect(self.open_edit_game_window)
         self.table_config()
         self.populate_table(select_all_games())
         self.populate_combobox()
@@ -20,7 +20,7 @@ class ListGameWindow(QWidget, ListGameForm):
         self.delete_game_button.clicked.connect(self.remove_game)
     
     def refresh_table_from_child_window(self):
-        data = select_all_game()
+        data = select_all_games()
         self.populate_table(data)
         
     def add_new_game_row(self, data):
@@ -34,12 +34,12 @@ class ListGameWindow(QWidget, ListGameForm):
         
         self.records_qty()
 
-    def new_game_window(self):
+    def open_new_game_window(self):
         from controllers.new_game_window import NewGameWindow
         window = NewGameWindow(self)
         window.show()
 
-    def edit_game_window(self):
+    def open_edit_game_window(self):
         from controllers.edit_game_window import EditGameWindow
         selected_row = self.listGamesTable.selectedItems()
 
@@ -75,7 +75,7 @@ class ListGameWindow(QWidget, ListGameForm):
         self.records_qty()
 
     def table_config(self):
-        column_headers = ("Game ID", "Title", "Category", "Duration", "Time played", "Path", "Description")
+        column_headers = ("Game ID", "Title", "Category", "Duration", "Played time", "Path", "Description")
         self.listGamesTable.setColumnCount(len(column_headers))
         self.listGamesTable.setHorizontalHeaderLabels(column_headers)
 
@@ -135,3 +135,5 @@ class ListGameWindow(QWidget, ListGameForm):
     def records_qty(self):
         qty_rows = str(self.listGamesTable.rowCount())
         self.gamesQtyLabel.setText(qty_rows)
+
+        
