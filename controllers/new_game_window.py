@@ -27,13 +27,13 @@ class NewGameWindow(QWidget, NewGameForm):
         errors_count = 0
         
         if title == "":
-            print("A title is mandatory")
+            print("Title is mandatory")
             errors_count += 1
         if category == "":
-            print("A category is mandatory")
+            print("Category is mandatory")
             errors_count +=1
         if duration == 0:
-            print("duration is mandatory")
+            print("Duration is mandatory")
             errors_count +=1
         if path == "":
             print("You must select a game")
@@ -78,3 +78,4 @@ class NewGameWindow(QWidget, NewGameForm):
 
 
 
+        
