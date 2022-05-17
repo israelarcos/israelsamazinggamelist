@@ -24,7 +24,7 @@ class EditGameWindow(QWidget, EditGameForm):
         self.titleLineEdit.setText(data[1])
         self.categoryLineEdit.setText(data[2])
         self.durationSpinBox.setValue(data[3])
-        self.durationSpinBox_2.setValue(data[4])
+        self.playedtimeSpinBox.setValue(data[4])
         self.filePathLineEdit.setText(data[5])
         self.descriptionTextedit.setText(data[6])
 
@@ -38,7 +38,7 @@ class EditGameWindow(QWidget, EditGameForm):
     def check_inputs(self):
         title = self.titleLineEdit.text()
         category = self.categoryLineEdit.text()
-        page_qty = self.durationSpinBox.value()
+        duration = self.durationSpinBox.value()
         path = self.filePathLineEdit.text()
 
         errors_count = 0
@@ -59,12 +59,12 @@ class EditGameWindow(QWidget, EditGameForm):
     def edit_game(self):
         title = self.titleLineEdit.text()
         category = self.categoryLineEdit.text()
-        duration = self.pageQtySpinBox.value()
-        playtime = self.durationSpinBox_2.value()
+        duration = self.durationSpinBox.value()
+        playedtime = self.playedtimeSpinBox.value()
         path = self.filePathLineEdit.text()
         description = self.descriptionTextedit.toPlainText()
 
-        data = [title, category, duration, playtime, path, description]
+        data = [title, category, duration, playedtime, path, description]
 
         if self.check_inputs():
             path_to_check = "game_files\\" + re.split("/|\\\\", path)[-1]
